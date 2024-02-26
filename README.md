@@ -110,7 +110,7 @@
 # Automated Secure ssh
 
 ## Step 1: Download the installer script.
-wget https://raw.githubusercontent.com/Primepogi/LEMP-Stack/main/secure_ssh_config.sh
+wget https://github.com/PrimeMurcia/Secure-SSH-Connection/main/secure_ssh_config.sh
 
 ## Step 2: Make the script executable
 chmod +x secure_ssh_config.sh

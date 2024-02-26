@@ -110,10 +110,19 @@
 # Automated Secure ssh
 
 ## Step 1: Download the installer script.
-wget https://github.com/PrimeMurcia/Secure-SSH-Connection/main/secure_ssh_config.sh
+
+    ```bash
+    wget https://github.com/PrimeMurcia/Secure-SSH-Connection/main/secure_ssh_config.sh
+    ```
 
 ## Step 2: Make the script executable
-chmod +x secure_ssh_config.sh
 
+    ```bash
+chmod +x secure_ssh_config.sh
+    ```
+    
 ## Step 3: Run the script.
-./secure_ssh_config.sh
+
+    ```bash
+   ./secure_ssh_config.sh
+    ```

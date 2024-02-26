@@ -9,9 +9,10 @@ sed -i "s/^#Port .*/Port $new_port/" /etc/ssh/sshd_config
 # Disable password authentication
 sed -i 's/^#PasswordAuthentication .*/PasswordAuthentication no/' /etc/ssh/sshd_config
 sed -i 's/^#PermitEmptyPasswords .*/PermitEmptyPasswords no/' /etc/ssh/sshd_config
+sed -i 's/^UsePAM .*/UsePAM no/' /etc/ssh/sshd_config
 
 # Disable root login
-sed -i 's/^##PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
+sed -i 's/^#PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
 
 # Remove existing SSH host keys and regenerate them
 rm /etc/ssh/ssh_host_*

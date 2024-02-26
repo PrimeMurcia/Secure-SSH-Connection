@@ -1,4 +1,4 @@
-# Secure SSH Configuration on Ubuntu
+# Secure SSH Configuration on Ubuntu 22.04 LTS Server
 
 ## Change Default SSH Port
 

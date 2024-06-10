@@ -125,5 +125,77 @@ Applying these secure algorithms strengthens the encryption and integrity of SSH
 
 ## Step 1: Download the Installer Script
 
-```bash
-wget https://github.com/PrimeMurcia/Secure-SSH-Connection/main/secure_ssh_config.sh
+    ```bash
+    wget https://github.com/PrimeMurcia/Secure-SSH-Connection/main/secure_ssh_config.sh
+    ```
+## Step 2: Make the Script Executable
+
+    ```bash
+    chmod +x secure_ssh_config.sh
+    ```
+ ## Step 3: Run the Script
+
+    ```bash
+    ./secure_ssh_config.sh
+    ```
+This script automates the above steps to secure your SSH configuration.
+
+# Basic Security on Ubuntu 22.04
+In addition to securing SSH, consider these basic security measures:
+
+## Install Fail2Ban
+Fail2Ban helps protect your server from brute-force attacks by banning IPs that show malicious signs.
+
+### 1. Install Fail2Ban:
+
+    ```bash
+    sudo apt update
+    sudo apt install fail2ban
+    ```
+### 2. Configure Fail2Ban:
+Copy the default configuration file:
+
+    ```bash
+    sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+    ```
+Open the configuration file:
+    ```bash
+    sudo nano /etc/fail2ban/jail.local
+    ```
+Ensure the following settings are configured:
+
+    ```bash
+    [sshd]
+    enabled = true
+    port = 2222  # Your custom SSH port
+    maxretry = 3
+    ```   
+Save the file and restart Fail2Ban:
+    ```bash
+    sudo systemctl restart fail2ban
+    ```
+## Install and Configure UFW (Uncomplicated Firewall)
+UFW helps manage firewall rules on your server.
+
+### 1. Install UFW
+    ```bash
+    sudo apt install ufw
+    ```
+### 2. Allow SSH Connections:
+    ```bash
+    sudo ufw allow 2222/tcp  # Your custom SSH port
+    ```
+### 3. Enable UFW:
+    ```bash
+    sudo ufw enable
+    ```
+### 4. Check UFW Status:
+    ```bash
+    sudo ufw status
+    ```
+With these security measures in place, your Ubuntu 22.04 LTS server will be more resilient against common attack vectors, ensuring a safer and more secure environment for your applications and data.
+    
+
+
+    
+

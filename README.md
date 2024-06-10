@@ -125,14 +125,12 @@ Applying these secure algorithms strengthens the encryption and integrity of SSH
 
 ## Step 1: Download the Installer Script
 
-    ```bash
     wget https://github.com/PrimeMurcia/Secure-SSH-Connection/main/secure_ssh_config.sh
-    ```
+
 ## Step 2: Make the Script Executable
 
-    ```bash
     chmod +x secure_ssh_config.sh
-    ```
+    
  ## Step 3: Run the Script
 
     ```bash

@@ -121,18 +121,17 @@ Removing small Diffie-Hellman moduli enhances the security of the key exchange p
 
 Applying these secure algorithms strengthens the encryption and integrity of SSH connections.
 
-# Automated Secure SSH Configuration
+## Automated Secure SSH Configuration
 
-## Step 1: Download the Installer Script
-
+1. **Download the Installer Script**
+    ```bash
     wget https://github.com/PrimeMurcia/Secure-SSH-Connection/main/secure_ssh_config.sh
-
-## Step 2: Make the Script Executable
-
+    ```
+2. **Make the Script Executable**  
+    ```bash
     chmod +x secure_ssh_config.sh
-    
- ## Step 3: Run the Script
-
+    ```
+2. **Run the Script** 
     ```bash
     ./secure_ssh_config.sh
     ```

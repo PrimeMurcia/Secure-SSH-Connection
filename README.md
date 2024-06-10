@@ -143,52 +143,49 @@ In addition to securing SSH, consider these basic security measures:
 ## Install Fail2Ban
 Fail2Ban helps protect your server from brute-force attacks by banning IPs that show malicious signs.
 
-### 1. Install Fail2Ban:
-
+1. **Install Fail2Ban:** 
     ```bash
     sudo apt update
     sudo apt install fail2ban
     ```
-### 2. Configure Fail2Ban:
+2. **Configure Fail2Ban:** 
 Copy the default configuration file:
 
     ```bash
     sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
     ```
-Open the configuration file:
+3. **Open the configuration file:**
+
     ```bash
     sudo nano /etc/fail2ban/jail.local
     ```
-Ensure the following settings are configured:
-
+4. **Ensure the following settings are configured:**
     ```bash
     [sshd]
     enabled = true
     port = 2222  # Your custom SSH port
     maxretry = 3
-    ```   
-Save the file and restart Fail2Ban:
+    ```
+5. **Save the file and restart Fail2Ban:**
     ```bash
     sudo systemctl restart fail2ban
     ```
 ## Install and Configure UFW (Uncomplicated Firewall)
 UFW helps manage firewall rules on your server.
 
-### 1. Install UFW
+1. **Install UFW**
     ```bash
     sudo apt install ufw
     ```
-### 2. Allow SSH Connections:
+2. **Allow SSH Connections:**
     ```bash
     sudo ufw allow 2222/tcp  # Your custom SSH port
     ```
-### 3. Enable UFW:
-
+3. **Enable UFW**
     ```bash
     sudo ufw enable
     ```
-### 4. Check UFW Status:
-
+4. **Check UFW Status:**
     ```bash
     sudo ufw status
     ```

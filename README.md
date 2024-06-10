@@ -186,10 +186,12 @@ UFW helps manage firewall rules on your server.
     sudo ufw allow 2222/tcp  # Your custom SSH port
     ```
 ### 3. Enable UFW:
+
     ```bash
     sudo ufw enable
     ```
 ### 4. Check UFW Status:
+
     ```bash
     sudo ufw status
     ```
